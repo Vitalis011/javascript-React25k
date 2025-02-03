@@ -1,0 +1,14 @@
+body {
+  background-color: blue;
+}
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+}
