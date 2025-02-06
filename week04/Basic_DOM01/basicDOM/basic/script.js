@@ -18,3 +18,13 @@ function changeText() {
 function changeTag() {
   text.textContent = "This is really nice actually";
 }
+
+let content = document.getElementById("content");
+let firstbutton = document.getElementById("button");
+let newChild = document.createElement("p");
+newChild.textContent = "Hello world";
+content.replaceChild("newChild", "oldChild");
+
+firstbutton.onclick = function () {
+  alert("Hello world");
+};
