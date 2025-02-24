@@ -60,6 +60,16 @@ let johnPositions = newTeamMembers.reduce((sum, member, index) => {
   if (member === "john") sum.push(index);
   return sum;
 });
+console.log(johnPositions);
+
+// using for each also works makes it easier to understand but also a bit longer.
+let johnNewPositions = [];
+newTeamMembers.forEach((member, index) => {
+  if (member === "John");
+  johnNewPositions.push(index);
+});
+console.log(johnNewPositions);
+
 // solution  14
 let uppercaseTeamMembers = newTeamMembers.map((member) => member.toUpperCase());
 console.log(uppercaseTeamMembers);
@@ -78,4 +88,95 @@ checkForJohn = newTeamMembers.some((member) => member >= "John");
 console.log(checkForJohn); // True.
 
 lengthOfLetters = newTeamMembers.every((member) => member.length >= 3);
+console.log(lengthOfLetters);
+
+// ANOTHER METHOD OF ANSWER TO THE ARRAY TASK
+
+let teamMembers1 = ["John", "Emily", "Mike", "Sarah"];
+// SOLUTION 1
+teamMembers1.forEach((member) => {
+  console.log(member);
+});
+// solution 2
+teamMembers1.shift();
+console.log(teamMembers1);
+//solution 3
+teamMembers1.pop();
+console.log(teamMembers1);
+//solution 4
+teamMembers1.unshift("Alex");
+console.log(teamMembers);
+// solution 5
+teamMembers1.push("Linda");
+console.log(teamMembers1);
+//solution 6
+const newArray1 = teamMembers.slice(2);
+console.log(newArray1);
+// solution 7
+let indexOfMike1 = teamMembers1;
+indexOfMike1 = teamMembers1.indexOf("Mike");
+console.log(indexOfMike1);
+//solution 8
+let indexOfJake1 = [];
+indexOfJake1 = teamMembers1.indexOf("Jake");
+console.log(indexOfJake1);
+//solution 9
+replaceMike = teamMembers1.splice(2, 1, "Carol", "Bruce");
+console.log(replaceMike);
+//solution 10
+let concatOfBob = [];
+concatOfBob = teamMembers1.concat("Bob");
+console.log(concatOfBob);
+console.log(teamMembers1);
+// solution 11
+let copyOfTeamMembers1 = [];
+copyOfTeamMembers1 = teamMembers1.slice();
+console.log(copyOfTeamMembers1);
+//solution 12
+let newMembers1 = ["Tina", "Dean"];
+newTeamMembers = newMembers1.concat(teamMembers1);
+console.log(newTeamMembers);
+// OR
+let newMembers2 = ["Tina", "Dean"];
+newTeamMembers = [...newMembers2, ...teamMembers1];
+console.log(newTeamMembers);
+//solution13
+// to find all occurance of john, we can use for each or .reduce()
+let newPositionOfJohn = [];
+teamMembers1.forEach((member, index) => {
+  if (member === "John") {
+    newPositionOfJohn.push(index);
+  }
+});
+console.log(newPositionOfJohn);
+// second solution using reduce
+let johnPositions1 = [];
+teamMembers1.reduce((total, member, index) => {
+  if (member === "John") total.push(index);
+  return total;
+});
+console.log(johnPositions1);
+
+//solution 14
+let capitalLetters = [];
+capitalLetters = newTeamMembers.map((member) => member.toUpperCase());
+console.log(capitalLetters);
+console.log(newTeamMembers);
+
+//solution 15
+teamMembers1.sort();
+console.log(teamMembers1);
+
+//solution 16
+teamMembers1.reverse();
+console.log(teamMembers1);
+
+// solution 17
+let someTeamMembers = [];
+someTeamMembers = teamMembers1.some((member) => member.length >= "John");
+console.log(someTeamMembers);
+
+// solution 18
+let lengthOfLetters = [];
+lengthOfLetters = teamMembers1.every((member) => member.length >= 3);
 console.log(lengthOfLetters);
