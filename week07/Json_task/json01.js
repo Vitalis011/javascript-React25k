@@ -17,6 +17,8 @@ Log the `name` property of the converted object.
 */
 
 // Your code here
+const jsStudent = JSON.parse(jsonString);
+console.log (jsStudent);
 
 /* Task 3
 Create an array named `classroom`, where each element is an object representing a student.
@@ -25,6 +27,7 @@ Convert the array into a JSON string and log it to the console.
 */
 
 // Your code here
+const classroom = 
 
 /* Task 4
 Take the JSON string from Task 3, convert it back into a JavaScript array,
