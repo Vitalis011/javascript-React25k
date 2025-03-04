@@ -69,9 +69,9 @@ const bankAccount = [
 ];
 function totalBalanceCalculated(bankAccount) {
   // creating a new balance
-  let totalBalance = bankAccount.balance;
+  let totalBalance = bankAccount[0].balance;
   // have to loop through each transaction as its an array and then add to total.balance
-  bankAccount.transactions.forEach((transaction) => {
+  bankAccount[0].transactions.forEach((transaction) => {
     totalBalance += transaction;
   });
 
@@ -84,6 +84,22 @@ Write a function that calculates and updates each student's `averageScore`.
 */
 
 // Your code here
+const students = [
+  { name: "vitalis", scores: [10, 5, 7], averageScore: 0 },
+  { name: "joe", scores: [29, 5, 8], averageScore: 0 },
+];
+
+function studentAverage(students) {
+  students.forEach((student) => {
+    //    go now in the Object, find the array and then calculate the average
+
+    let total = student.scores.reduce((sum, score) => sum + score, 0);
+    // how you get average of array??? student.scores
+    student.averageScore = total / student.scores.length;
+  });
+}
+studentAverage(students);
+console.log(students);
 
 /* Task 6
 Define an array named `courses`, each containing `courseName`, `instructor`, and `studentsEnrolled`.
@@ -91,13 +107,36 @@ Write a function that logs the course name of any course with more than 30 stude
 */
 
 // Your code here
-
+const courses = [
+  { courseName: "English", instructor: "Mikey", studentsEnrolled: 25 },
+  { courseName: "React25k", instructor: "Margit", studentsEnrolled: 31 },
+  { courseName: "UI design", instructor: "Holland", studentsEnrolled: 31 },
+];
+function numberOfStudents(courses) {
+  return courses
+    .filter((course) => course.studentsEnrolled >= 30)
+    .map((courses) => courses.courseName);
+}
+console.log(numberOfStudents(courses));
 /* Task 7
 Create an object `pet` with properties `species`, `name`, and `isVaccinated`.
 Write a function that returns `"Vaccination required"` if the pet is not vaccinated.
 */
 
 // Your code here
+const pet = [
+  { species: "Human", name: "Mikey", isVaccinated: false },
+  { species: "Reptile", name: "Snake", isVaccinated: true },
+];
+function vaccinated(pet) {
+  if (pet.isVaccinated === false) {
+    console.log("Vaccination required");
+  } else {
+    console.log("null");
+  }
+}
+vaccinated(pet[0]);
+vaccinated(pet[1]);
 
 /* Task 8
 Define an object named `city` with properties `name`, `population`, and `landmark`.
@@ -105,7 +144,19 @@ Write a function that logs `"This is a big city!"` if the population exceeds 1,0
 */
 
 // Your code here
-
+const city = [
+  { name: "Helsinki", population: 200000, landMark: 6500 },
+  { name: "Moscow", population: 1500000, landMark: 150000 },
+];
+function checkCitySize(city) {
+  if (city.population > 100000) {
+    console.log("This is a big city");
+  } else {
+    console.log("small");
+  }
+}
+checkCitySize(city[1]);
+checkCitySize(city);
 /* Task 9
 Create an array `transactions`, where each transaction is an object with `type` ("credit" or "debit") and `amount`.
 Write a function that calculates the total balance after processing all transactions.
