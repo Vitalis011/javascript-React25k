@@ -58,6 +58,15 @@ Then, parse the JSON string back into an object and log the `conditions` propert
 */
 
 // Your code here
+const weatherReport = { temperature: 50, humidity: 40, conditions: "Sunny" };
+
+const weatherJSON = JSON.stringify(weatherReport);
+console.log(weatherJSON);
+
+const parsedWeather = JSON.parse(weatherJSON);
+console.log(parsedWeather);
+
+console.log(weatherReport.conditions);
 
 /* Task 6
 Define an array named `movies`, where each movie has:
@@ -70,6 +79,28 @@ Log all movie titles with a rating higher than 8.
 */
 
 // Your code here
+const movies = [
+  {
+    title: "Good boys",
+    director: "Vitalis",
+    rating: 9.5,
+  },
+  {
+    title: "Bond",
+    director: "Markar",
+    rating: 9.2,
+  },
+];
+const jsonMovies = JSON.stringify(movies);
+console.log(jsonMovies);
+
+parsedMovies = JSON.parse(jsonMovies);
+console.log(parsedMovies);
+
+parsedMovies.forEach((movie) => {
+  if (movie.rating > 8);
+  console.log(movie.title);
+});
 
 /* Task 7
 Write a function `filterHighRatedMovies(jsonString)` that:
@@ -80,6 +111,15 @@ Write a function `filterHighRatedMovies(jsonString)` that:
 
 // Your code here
 
+function filterHighRatedMovies(jsonMovies) {
+  const JavaScriptArray = JSON.parse(jsonMovies);
+  const newArray = JavaScriptArray.filter((movie) => movie.rating > 8).map(
+    (movie) => movie.title
+  );
+  return newArray;
+}
+const higerRatedMovie = filterHighRatedMovies(jsonMovies);
+console.log(higerRatedMovie);
 /* Task 8
 Define an object named `shoppingCart` with:
 - `items` (an array of product objects, each with `name` and `price`)
