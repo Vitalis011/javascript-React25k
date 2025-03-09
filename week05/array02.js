@@ -261,4 +261,4 @@ console.log(filteredWords);
 Create a new array containing only words longer than 5 letters from the words array.
 Expected outcome: ['banana', 'cherry', 'strawberry']
 */
-// Write your function here
+// Write your function her
