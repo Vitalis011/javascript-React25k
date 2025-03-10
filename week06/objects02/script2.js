@@ -163,7 +163,19 @@ Write a function that calculates the total balance after processing all transact
 */
 
 // Your code here
-
+const transactions = [
+  { type: "Debit", amount: 1000 },
+  { type: "credit", amount: 600 },
+];
+function totalAmount(transactions) {
+  let totalBalance = 0;
+  transactions.forEach((transaction) => {
+    totalBalance += transaction.amount;
+  });
+  return totalBalance;
+}
+const totalBalance = totalAmount(transactions);
+console.log(`total balance: ${totalBalance}`);
 /* Task 10
 Define an object named `foxPack` containing an array of fox objects.
 Each fox has `name`, `age`, and `furColor`.
@@ -171,6 +183,18 @@ Write a function that filters out only the foxes that are younger than 2.
 */
 
 // Your code here
+const foxPack = [
+  { name: "marty", age: 6, furColor: "yellow" },
+  { name: "pey", age: 1, furColor: "blue" },
+  { name: "Uno", age: 3, furColor: "purple" },
+];
+const olderFox = [];
+foxPack.forEach((pack) => {
+  if (pack.age > 2) {
+    olderFox.push(pack.name);
+  }
+});
+console.log(olderFox);
 
 /* Task 11
 Create an object `gameCharacter` with properties `name`, `level`, `health`, and `inventory` (an array).
@@ -178,6 +202,16 @@ Write a function that logs all items in the character’s inventory.
 */
 
 // Your code here
+const gameCharacter = {
+  name: "Aragorn",
+  level: 10,
+  health: 100,
+  inventory: ["Sword", "Shield", "Potion"],
+};
+
+const loggedItems = gameCharacter.inventory.forEach((item) =>
+  console.log(item)
+);
 
 /* Task 12
 Define an array named `employees`, where each employee has a `name`, `role`, and `workingHours`.
@@ -185,6 +219,18 @@ Write a function that finds and logs employees who work more than 40 hours.
 */
 
 // Your code here
+const employees = [
+  { name: "Alice", role: "Developer", workingHours: 40 },
+  { name: "Bob", role: "Designer", workingHours: 35 },
+  { name: "Charlie", role: "Manager", workingHours: 45 },
+];
+const moreHoursWork = [];
+employees.forEach((employee) => {
+  if (employee.workingHours > 40) {
+    moreHoursWork.push(employee.name);
+  }
+});
+console.log(moreHoursWork);
 
 /* Task 13
 Create an array `musicAlbums` where each album has `title`, `artist`, and `releaseYear`.
@@ -192,6 +238,19 @@ Write a function that logs albums released after 2000.
 */
 
 // Your code here
+const musicAlbums = [
+  { title: "Thriller", artist: "Michael Jackson", releaseYear: 1982 },
+  { title: "Back in Black", artist: "AC/DC", releaseYear: 1980 },
+  { title: "Rumours", artist: "Fleetwood Mac", releaseYear: 1977 },
+  {
+    title: "The Dark Side of the Moon",
+    artist: "Pink Floyd",
+    releaseYear: 2001,
+  },
+];
+const olderAlbums = musicAlbums.filter((album) => album.releaseYear > 2000);
+
+console.log(olderAlbums);
 
 /* Task 14
 Define an array named `cars`, each containing `brand`, `model`, and `horsepower`.
@@ -199,10 +258,39 @@ Write a function that finds and returns the car with the highest horsepower.
 */
 
 // Your code here
-
+const cars = [
+  { brand: "Tesla", model: "Model S", horsepower: 670 },
+  { brand: "Ford", model: "Mustang GT", horsepower: 450 },
+  { brand: "Chevrolet", model: "Camaro ZL1", horsepower: 650 },
+  { brand: "Dodge", model: "Challenger Hellcat", horsepower: 717 },
+  { brand: "BMW", model: "M5", horsepower: 600 },
+];
+const highestHorsepower = cars.reduce(
+  (maxCar, car) => (car.horsepower > maxCar.horsepower ? car : maxCar) // means that if the car.horse power is greater than maxcar, it returns the car.
+);
+console.log(highestHorsepower);
 /* Task 15
 Create an array of `airports`, where each airport has `name`, `country`, and `flightsPerDay`.
 Write a function that finds the airport with the most daily flights.
 */
 
 // Your code here
+const airports = [
+  { name: "Heathrow", country: "United Kingdom", flightsPerDay: 1300 },
+  {
+    name: "John F. Kennedy International",
+    country: "United States",
+    flightsPerDay: 1500,
+  },
+  {
+    name: "Dubai International",
+    country: "United Arab Emirates",
+    flightsPerDay: 1200,
+  },
+  { name: "Tokyo Haneda", country: "Japan", flightsPerDay: 1100 },
+];
+
+const delayedFlight = airports.reduce((maxDelay, airport) =>
+  airport.flightsPerDay > maxDelay.flightsPerDay ? airport : maxDelay
+);
+console.log(delayedFlight);
