@@ -14,5 +14,5 @@ const checkForFox = (hasFox) => {
   }
 };
 
-console.log(checkForfox(true));
+console.log(checkForFox(true));
 console.log(checkForFox(false));

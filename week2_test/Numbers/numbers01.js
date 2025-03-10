@@ -12,10 +12,10 @@ Print the results using console.log() with messages:
 let numString1 = "42";
 let numString2 = "3.14";
 
-let integer2 = Number.parseInt(numString1);
+let integer1 = Number.parseInt(numString1);
 // Number indicates that it's a whole number.
 
 let float2 = Number.parseFloat(numString2);
 
 console.log("The integer is " + integer1 + ".");
-console.log("The floating-point number is " + float1 + ".");
+console.log("The floating-point number is " + float2 + ".");

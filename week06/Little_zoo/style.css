@@ -1,7 +1,7 @@
 /* General Page Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  font-family: "Rubik", sans-serif;
+  background-color: #eef2f7;
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -12,15 +12,17 @@ body {
   width: 80%;
   max-width: 600px;
   margin: auto;
-  background: white;
+  background: #ffffff;
   padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
 }
 
 /* Heading */
 h1 {
-  color: #333;
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 /* Controls (Search, Filter, Sort) */
@@ -31,21 +33,22 @@ h1 {
 input,
 select,
 button {
-  padding: 10px;
+  padding: 12px;
   margin: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #28a745;
   color: white;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #218838;
 }
 
 /* Animal List */
@@ -58,7 +61,7 @@ button:hover {
   background: #fff;
   margin: 8px 0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -74,7 +77,7 @@ button:hover {
 }
 
 .remove-btn:hover {
-  background-color: #c82333;
+  background-color: #c0392b;
 }
 
 /* Add New Animal Form */
@@ -82,4 +85,7 @@ button:hover {
   margin-top: 20px;
   padding-top: 15px;
   border-top: 2px solid #ddd;
+}
+.add-animal h2 {
+  color: #34495e;
 }
