@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ATM Simulator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ATM Simulator</h1>
+      <h2>Balance: $<span id="balance">500</span> €</h2>
+
+      <div class="transaction">
+        <input
+          type="number"
+          class="depositInput"
+          placeholder="Enter deposit amount"
+        />
+        <button class="depositBtn">Deposit</button>
+      </div>
+
+      <div class="transaction">
+        <input
+          type="number"
+          class="withdrawInput"
+          placeholder="Enter withdraw amount"
+        />
+        <button class="withdrawBtn">Withdraw</button>
+      </div>
+      <p class="message"></p>
+    </div>
+    <div class="live-update">
+      <input type="text" id="inputField" placeholder="Type something..." />
+      <p id="displayText">Your text will appear here...</p>
+    </div>
+
+    <div class="color-changer">
+      <button id="colorChangeBtn">Change Background Color</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
