@@ -45,4 +45,10 @@
 
 - [x] Error handling
 - [x] Fault finding
-- [ ] Js writing
+- [x] Js writing
+
+## Week09
+
+- [x] Chaining
+- [x] Destructuring
+- [x] Spread-rest

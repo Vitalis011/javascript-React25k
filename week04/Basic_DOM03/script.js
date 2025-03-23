@@ -9,9 +9,9 @@ const input = document.querySelector("#displayInput");
 const div = document.querySelector("#displayText");
 
 function update() {
-  text.textContent = input.Value;
+  div.textContent = input.value;
 }
-input.addEventListener("dblclick", update);
+input.addEventListener("input", update);
 
 // event.target.value. if youre working with an input and you want to read the real time value.
 // because the input is tartgeted
