@@ -21,25 +21,27 @@
 ## Week04
 
 - [x] ATM_simulator
-- [ ] Basic DOM
+- [x] Basic DOM
 - [x] Pancake Maker1
 
 ## Week05
 
 - [x] Array01-02
-- [ ] Array03
+- [x] Array03
+- [x] Pancake Maker 2
 
 ## Week06
 
 - [x] Little zoo
 - [x] Objects01
 - [x] Objects02
-- [ ] Objects03
+- [x] Objects03
 
 ## Week07
 
 - [x] Json
-- [ ] LocalStorage
+- [x] LocalStorage
+- [ ] Pancake Maker3
 
 ## Week08
 
